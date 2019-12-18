@@ -22,9 +22,7 @@
 Ownership Rules:
 
 1) Each value has a variable which is its owner.
-
 2) There can only be one owner at any given time.
-
 3) When the owner goes out of scope, the value will be dropped out of memory.
 */
 
@@ -145,4 +143,39 @@ fn own_and_borrow_stuff(a: &mut String, b: &bool, c: u8) {}
 /*
     | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
     |"A"|" "|"S"|"t"|"r"|"i"|"n"|"g"|
+*/
+
+// fn main() {
+//     let x = 10;
+
+//     let y = x;
+
+//     print(x, y);
+// }
+
+// fn print(x: u8, y: u8) {
+//     println!("{}, {}", y, x);
+// }
+
+/*
+    ptr: main
+    args:
+    local vars: x = 1
+        print(x)
+    return value: ()
+    drop x
+*/
+
+/*
+    print
+        a = 1 as u32
+        println!("value {}", a)
+    return value ()
+    drop a
+*/
+
+/*
+    println!()
+
+    -> ()
 */
